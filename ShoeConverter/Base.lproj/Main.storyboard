@@ -30,7 +30,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="115" width="288" height="30"/>
+                                    <rect key="frame" x="16" y="115" width="187" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="euroShoeSizeEditingChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="eBG-Xc-lgA"/>
@@ -41,7 +41,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="78" width="288" height="30"/>
+                                    <rect key="frame" x="16" y="78" width="186" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="usShoeSizeEditingChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="yEc-m3-DxB"/>
@@ -56,6 +56,24 @@
                                     <action selector="sexSwitchValueChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Toy-wg-PzG"/>
                                 </connections>
                             </switch>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" wraps="YES" value="6" minimumValue="6" maximumValue="16" stepValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="se4-ua-sWy">
+                                <rect key="frame" x="-47" y="-14" width="94" height="29"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="210" y="78" width="94" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="usStepperValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="4Rb-Mv-TSN"/>
+                                </connections>
+                            </stepper>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" wraps="YES" value="4" minimumValue="4" maximumValue="12" stepValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hOE-tL-qRd">
+                                <rect key="frame" x="-47" y="-14" width="94" height="29"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="210" y="116" width="94" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="euroStepperValueChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="YQc-M9-Thy"/>
+                                </connections>
+                            </stepper>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -64,6 +82,8 @@
                                 <exclude reference="ig6-3l-Yct"/>
                                 <exclude reference="LlX-dz-t63"/>
                                 <exclude reference="5j4-Ot-Nfd"/>
+                                <exclude reference="se4-ua-sWy"/>
+                                <exclude reference="hOE-tL-qRd"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -72,6 +92,8 @@
                                 <include reference="ig6-3l-Yct"/>
                                 <include reference="LlX-dz-t63"/>
                                 <include reference="5j4-Ot-Nfd"/>
+                                <include reference="se4-ua-sWy"/>
+                                <include reference="hOE-tL-qRd"/>
                             </mask>
                         </variation>
                     </view>
@@ -80,8 +102,10 @@
                     <connections>
                         <outlet property="conversionLabel" destination="Sye-1w-mbU" id="jBK-yg-ikH"/>
                         <outlet property="euroShoeSizeTextField" destination="ig6-3l-Yct" id="Dd6-UN-Vwl"/>
+                        <outlet property="euroStepper" destination="hOE-tL-qRd" id="ffW-Qy-0Kf"/>
                         <outlet property="sexSwitch" destination="5j4-Ot-Nfd" id="gJC-kK-OhQ"/>
                         <outlet property="usShoeSizeTextField" destination="LlX-dz-t63" id="hM0-Jf-L1x"/>
+                        <outlet property="usStepper" destination="se4-ua-sWy" id="qUA-OL-k2M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
